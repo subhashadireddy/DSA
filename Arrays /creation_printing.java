@@ -15,3 +15,4 @@ public class first_creation {
 
     }
 }
+//printing the array
