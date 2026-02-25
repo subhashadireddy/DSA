@@ -1,0 +1,53 @@
+
+class Node {
+
+    int data;
+    Node next;
+
+    Node(int d) {
+        this.data = d;
+        this.next = null;
+    }
+}
+
+public class llsum {
+
+    public static void main(String[] args) {
+        Node head = new Node(10);
+        insert(head, 20);
+        insert(head, 30);
+        insert(head, 40);
+        display(head);
+        System.out.println(sum(head));
+    }
+
+    static void insert(Node ob, int x) {
+        Node nn = new Node(x);
+        Node t = ob;
+        while (t.next != null) {
+            t = t.next;
+        }
+        t.next = nn;
+
+    }
+
+    static void display(Node ob) {
+        Node t = ob;
+        while (t != null) {
+            System.out.println(t.data);
+            t = t.next;
+        }
+
+    }
+    static int sum(Node ob){
+        int s=0;
+        Node t = ob;
+        while(t!=null)
+        {
+            s = s+t.data;
+            t=t.next;
+        }
+        return s;
+    }
+
+}
